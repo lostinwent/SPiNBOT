@@ -1,11 +1,3 @@
-<html>
-<head>
-  <title>Roulette</title>
-</head>
-<body>
-<input type="button" value="spin" onclick="spin();" style="float: left;" />
-<canvas id="wheelcanvas" width="500" height="500"></canvas>
-<script type="application/javascript">
 var colors = ["#f1bb62", "#ee5d85", "#caeaf1", "#eb5b68", "#f8f082",            "#c5c452",  "#82cfcd",  "#cddf7f",
                 "#f05622", "#c5de8e",
                 "#ee5d85", "#dedee9"];
@@ -14,20 +6,37 @@ var directions = ["Forward", "Backward", "Turn Right", "Turn Left",
 
 var time = ["1", "2", "3"];
 
-var possibilities = [];
+// var possibilities = [];
 
-function possibilities(){
-  for (var i = 0; i < directions.length; i++){
-    var randomNumber_direction = Math.floor(Math.random()*directions.length);
-    var randomNumber_time = Math.floor(Math.random()*time.length);
-    var possibility = (directions[randomNubmer_direction]) + '\n' +  (time[randomNumber_time]);
-    console.log(possibility);
-    possibilities.push(possibility);
-  }
-}
+// for (i=0; i < directions.length; i++) {
+//   // var time_random = [];
+//   var randomNumber_time = time[Math.floor(Math.random()*time.length)];
+//   // time_random.push(randomNumber_time);
+//   console.log(randomNumber_time);
+//   // for (a = 0; a < time_random.length; a++) {
+//       directions.forEach(function(possibility){
+//         time_random.forEach(function(t){
+//           possibilities.push(possibility + '\n' + t);
+//       });
+//     });
+//   // }; 
+// }
+
+
+var possibilities = ["Forward 1", "Forward 2", "Backward 1", "Backward 2", "Left 1", "Left 2", "Right 1", "Right 2", "Strafe Right 1", "Strafe Right 2", "Strafe Left 1", "Strafe Left 2"];
+
+// function possibilities(){
+//   for (var i = 0; i < directions.length; i++){
+//     var randomNumber_direction = Math.floor(Math.random()*directions.length);
+//     var randomNumber_time = Math.floor(Math.random()*time.length);
+//     var possibility = (directions[randomNubmer_direction]) + '\n' + (time[randomNumber_time]);
+//     console.log(possibility);
+//     possibilities.push(possibility);
+//   }
+// }
 
   var startAngle = 0;
-  var arc = Math.PI / 3;
+  var arc = Math.PI / 6;
   var spinTimeout = null;
   
   var spinArcStart = 10;
@@ -56,7 +65,7 @@ function possibilities(){
       
       ctx.font = 'bold 12px sans-serif';
       
-      for(var i = 0; i < 6; i++) {
+      for(var i = 0; i < 12; i++) {
         var angle = startAngle + i * arc;
         ctx.fillStyle = colors[i];
         
@@ -90,12 +99,12 @@ function possibilities(){
     }
   }
   
-  function spin() {
+  $("#button").click(function(){
     spinAngleStart = Math.random() * 10 + 10;
     spinTime = 0;
     spinTimeTotal = Math.random() * 3 + 4 * 1000;
     rotateWheel();
-  }
+  });
   
   function rotateWheel() {
     spinTime += 30;
@@ -119,6 +128,7 @@ function possibilities(){
     var text = possibilities[index]
     ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
     ctx.restore();
+    console.log(text);
   }
   
   function easeOut(t, b, c, d) {
@@ -128,6 +138,3 @@ function possibilities(){
   }
   
   draw();
-</script>
-</body>
-</html>
