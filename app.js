@@ -100,7 +100,5 @@ $(document).ready(function(){
 		}
 	});	
 
-
-
 });
 
