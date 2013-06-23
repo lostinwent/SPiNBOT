@@ -52,9 +52,9 @@ var possibilities = ["Forward 1", "Forward 2", "Backward 1", "Backward 2", "Left
   function drawRouletteWheel() {
     var canvas = document.getElementById("wheelcanvas");
     if (canvas.getContext) {
-      var outsideRadius = 200;
-      var textRadius = 160;
-      var insideRadius = 125;
+      var outsideRadius = 250;
+      var textRadius = 200;
+      var insideRadius = 150;
       
       ctx = canvas.getContext("2d");
       ctx.clearRect(0,0,500,500);
@@ -63,7 +63,7 @@ var possibilities = ["Forward 1", "Forward 2", "Backward 1", "Backward 2", "Left
       ctx.strokeStyle = "white";
       ctx.lineWidth = 0;
       
-      ctx.font = 'bold 12px sans-serif';
+      ctx.font = 'bold 16px sans-serif';
       
       for(var i = 0; i < 12; i++) {
         var angle = startAngle + i * arc;
@@ -88,13 +88,13 @@ var possibilities = ["Forward 1", "Forward 2", "Backward 1", "Backward 2", "Left
       ctx.fillStyle = "black";
       ctx.beginPath();
       ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
-      ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
+      ctx.lineTo(250 + 100, 250 - (outsideRadius + 5));
       ctx.lineTo(250 + 4, 250 - (outsideRadius - 5));
       ctx.lineTo(250 + 9, 250 - (outsideRadius - 5));
       ctx.lineTo(250 + 0, 250 - (outsideRadius - 13));
       ctx.lineTo(250 - 9, 250 - (outsideRadius - 5));
       ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
-      ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
+      ctx.lineTo(250 - 100, 250 - (outsideRadius + 5));
       ctx.fill();
     }
   }
@@ -124,7 +124,7 @@ var possibilities = ["Forward 1", "Forward 2", "Backward 1", "Backward 2", "Left
     var arcd = arc * 180 / Math.PI;
     var index = Math.floor((360 - degrees % 360) / arcd);
     ctx.save();
-    ctx.font = 'bold 30px sans-serif';
+    ctx.font = 'bold 40px Impact';
     var text = possibilities[index]
     ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
     ctx.restore();
