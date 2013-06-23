@@ -290,9 +290,21 @@ function whatToDo(c_direction, c_time) {
      });
   });
 
+  //   $(document).ready(function() {
+  //    $('#sb2').click(function() {
+  //     $.fn.speedoPopup({theme:"metro"}, {htmlContent: "<p> I'm a simple content </p>"});
+  //    });
+  // });
+
   $(document).ready(function() {
     $('#sb1').click(function(bbb){
       $.scrollTo(".spin", 800, {easing:'swing'});
+     });
+  });
+
+  $(document).ready(function() {
+    $('#sb2').click(function(bbb){
+      $.scrollTo(".control_robot", 800, {easing:'swing'});
      });
   });
 });
