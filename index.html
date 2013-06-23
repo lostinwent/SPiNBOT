@@ -14,12 +14,27 @@
 			<img src="images/spinbot.png" id="rb"/>
 			<div class="nav_button">
 				<img src="images/control_robot.png" id="sb1"/>
+				<!-- <div class="control_robot_overlay">
+					<img src="images/control_robot1.png"/>
+				</div> -->
 				<img src="images/feeling_lucky.png" id="sb2"/>
+				<!-- <div class="play_overlay">
+					<img src="play.png"/>
+				</div> -->
 				<img src="images/winning_rules.png" id="sb3"/>
+				<!-- <div class="winning_overlay">
+					<img src="images/winning_rules1.png"/>
+				</div> -->
 			</div>
 		</div>
+
+	<div class="spin">
+		<img src="images/spin.png" onlick="spin();" class = "spin_button" id="button"/>
+		<!-- <input type="submit" value="SPIN!" onlick="spin();" id="button"/> -->
+		<canvas id="wheelcanvas" width="500" height="500"></canvas>
+	</div>		
 		
-		<div class="buttons">
+		<div class="control_robot">
 <!--		<form>-->
 			<input type="submit" id="forward" value="click here or press W to fuckface forward"></input>
 			<input type="submit" id="backward" value="click here or press S fuckface backward"></input>
@@ -28,9 +43,7 @@
 			<input type="submit" id="st-right" value="click here or press Q to fuckface strafe left"></input>
 			<input type="submit" id="st-left" value="click here or press E to fuckface strafe right"></input>
 <!--		</form>-->
-		<input type="submit" value="SPIN!" onlick="spin();" id="button"/>
-		
-		<canvas id="wheelcanvas" width="500" height="500"></canvas>
+		</div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>

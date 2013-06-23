@@ -100,5 +100,23 @@ $(document).ready(function(){
 		}
 	});	
 
+
+	// $('#sb1').mouseover(function () {
+	//     $('.control_robot_overlay').show();
+	// }).mouseout(function () {
+	//     $('.control_robot_overlay').hide();
+	// });
+
+	// $('#sb2').mouseover(function () {
+	//     $('.play_overlay').show();
+	// }).mouseout(function () {
+	//     $('.play_overlay').hide();
+	// });
+
+	// $('#sb3').mouseover(function () {
+	//     $('.winning_overlay').show();
+	// }).mouseout(function () {
+	//     $('.winning_overlay').hide();
+	// });
 });
 
