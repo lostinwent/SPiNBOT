@@ -78,3 +78,17 @@ body {
 .reveal_content {
 	font: 25px "Gill Sans MT";
 }
+
+#instructions {
+	margin-top: 40px;
+}
+
+#reveal_instructions_title {
+	font: 80px kilogram;
+	margin-top: -15px;
+}
+
+.reveal_instructions_content {
+	font: 25px "Gill Sans MT";
+	margin-top: -40px;
+}

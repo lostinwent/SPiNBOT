@@ -286,13 +286,20 @@ function whatToDo(c_direction, c_time) {
   $(document).ready(function() {
      $('#sb3').click(function(e) {
           e.preventDefault();
-    $('#myModal').reveal();
+    $('#winning_reveal').reveal();
      });
   });
 
-  //   $(document).ready(function() {
-  //    $('#sb2').click(function() {
-  //     $.fn.speedoPopup({theme:"metro"}, {htmlContent: "<p> I'm a simple content </p>"});
+  $(document).ready(function() {
+     $('#instructions').click(function(ccc) {
+          ccc.preventDefault();
+      $('#instructions_reveal').reveal();
+     });
+  });
+
+  // $(document).ready(function() {
+  //   $('#instructions').click(function() {
+  //   $.fn.speedoPopup({theme:"metro"}, {htmlContent: "<p> Click the direction icons or using keys as following:\n W: forward\n S: backward\n A: left\n D: right\n Q: strafe left\n E: strafe right"});
   //    });
   // });
 
