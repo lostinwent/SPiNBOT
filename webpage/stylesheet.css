@@ -40,6 +40,7 @@ body {
 .spin{
 	min-height: 666px;
 	min-width: 1200px;
+	background-color: #e4e4e4;
 }
 .spin_button {
 	margin: auto;
@@ -57,7 +58,7 @@ body {
 	min-width: 1200px;
 }
 
-.control_robot{
+.control_robot {
 	margin: auto;
 }
 
@@ -65,7 +66,15 @@ body {
 	margin-top: 40px;
 }
 
-#forward{
+#forward {
 	margin-left: 70px;
 	margin-right: 70px;
+}
+
+#reveal_title {
+	font: 80px kilogram;
+}
+
+.reveal_content {
+	font: 25px "Gill Sans MT";
 }
