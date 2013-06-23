@@ -20,11 +20,9 @@ var rand_time = time.sort(randomSort);
 
 var possibilities = [];
 for(var i=0; i < 6; i++) {
-    possibilities.push((rand_direction[i] || "") +" "+(rand_time[i] || ""));
+  possibilities.push((rand_direction[i] || "") +" "+(rand_time[i] || ""));
 }
-console.log(possibilities)
-
-
+console.log(possibilities);
 
   var result;
 

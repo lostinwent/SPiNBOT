@@ -63,7 +63,7 @@ body {
 }
 
 #st-left, #forward, #st-right{
-	margin-top: 40px;
+	margin-top: 25px;
 }
 
 #forward {
@@ -80,7 +80,7 @@ body {
 }
 
 #instructions {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 #reveal_instructions_title {
@@ -91,4 +91,8 @@ body {
 .reveal_instructions_content {
 	font: 25px "Gill Sans MT";
 	margin-top: -40px;
+}
+
+#robot_car {
+	margin-top: 30px;
 }
