@@ -6,8 +6,6 @@ var colors = ["#f1bb62", "#ee5d85", "#caeaf1", "#eb5b68", "#f8f082",            
 var directions = ["Forward", "Backward", "Turn Right", "Turn Left",
                      "Strafe Right", "Strafe Left"];
 
-var time = ["1", "2", "3"];
-
 var time = ["1", "2", "3", "1", "2", "3"];
 
 function randomSort() {
@@ -17,10 +15,10 @@ function randomSort() {
 var rand_direction  = directions.sort(randomSort);
 
 
-var rand_time = time.sort(randomSort)
+var rand_time = time.sort(randomSort);
 
 
-var possibilities = []
+var possibilities = [];
 for(var i=0; i < 6; i++) {
     possibilities.push((rand_direction[i] || "") +" "+(rand_time[i] || ""));
 }
@@ -146,41 +144,65 @@ console.log(possibilities)
   draw();
 
 function whatToDo(c_direction, c_time) {
-  if (c_direction == "Forward ") {
-    for(var i=0; i < c_time; i++) {
+   if (c_direction == "Fowrard ") {
   $.ajax(url, { dataType: 'jsonp', data: { forward: 1 } } );
+  window.setTimeout(fwd, (1000 * c_time));
+  function fwd() {
+    $.ajax(url, { dataType: 'jsonp', data: { forward: 0 } } );
+  }
   console.log(c_time)
-  }}
+  }
+
+
   else if (c_direction == "Backward ") {
-    for(var i=0; i < c_time; i++) {
-  $.ajax(url, { dataType: 'jsonp', data: { forward: -1 } } );
+    $.ajax(url, { dataType: 'jsonp', data: { forward: -1 } } );
+  window.setTimeout(back, (1000 * c_time));
+  function back() {
+    $.ajax(url, { dataType: 'jsonp', data: { forward: 0 } } );
+  }
   console.log(c_time)
-  }}
+  }
+
+
   else if (c_direction == "Turn Right ") {
-    for(var i=0; i < c_time; i++) {
-  $.ajax(url, { dataType: 'jsonp', data: { turn: 1 } } );
+    $.ajax(url, { dataType: 'jsonp', data: { turn: 1 } } );
+  window.setTimeout(tRight, (1000 * c_time));
+  function tRight() {
+    $.ajax(url, { dataType: 'jsonp', data: { turn: 0 } } );
+  }
   console.log(c_time)
-  }}
+  }
+
+
   else if (c_direction == "Turn Left ") {
-    for(var i=0; i < c_time; i++) {
-  $.ajax(url, { dataType: 'jsonp', data: { turn: -1 } } );
+       $.ajax(url, { dataType: 'jsonp', data: { turn: -1 } } );
+  window.setTimeout(tLeft, (1000 * c_time));
+  function tLeft() {
+    $.ajax(url, { dataType: 'jsonp', data: { turn: 0 } } );
+  }
   console.log(c_time)
-  }}
-  else if (c_direction == "Turn Right ") {
-    for(var i=0; i < c_time; i++) {
-  $.ajax(url, { dataType: 'jsonp', data: { turn: 1 } } );
-  console.log(c_time)
-  }}
+  }
+
+
   else if (c_direction == "Strafe Right ") {
-    for(var i=0; i < c_time; i++) {
   $.ajax(url, { dataType: 'jsonp', data: { strafe: 1 } } );
+  window.setTimeout(strafeRight, (1000 * c_time));
+  function strafeRight() {
+    $.ajax(url, { dataType: 'jsonp', data: { strafe: 0 } } );
+  }
   console.log(c_time)
-  }}
-  else if (c_direction == "Strafe Right ") {
-    for(var i=0; i < c_time; i++) {
-  $.ajax(url, { dataType: 'jsonp', data: { strafe: 1 } } );
+  }
+
+
+  else if (c_direction == "Strafe Left ") {
+     $.ajax(url, { dataType: 'jsonp', data: { strafe: -1 } } );
+  window.setTimeout(strafeRight, (1000 * c_time));
+  function strafeRight() {
+    $.ajax(url, { dataType: 'jsonp', data: { strafe: 0 } } );
+  }
   console.log(c_time)
-  }}
+  }
+
 }
 
   $(document).ready(function(){
