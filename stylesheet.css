@@ -4,7 +4,7 @@ body {
 }
 
 .start {
-	min-heightheight: 500px;
+	min-heightheight: 666px;
 	min-width: 1200px;
 	background-color: #f05622;
 	margin-top: -58px;
@@ -37,6 +37,10 @@ body {
 	margin-right: 30px;
 }*/
 
+.spin{
+	min-height: 666px;
+	min-width: 1200px;
+}
 .spin_button {
 	margin: auto;
 	position: relative;
@@ -45,4 +49,23 @@ body {
 
 .wheelcanvas {
 	margin: auto;
+}
+
+.control_robot {
+	background-color: #22b0e5;
+	min-height: 666px;
+	min-width: 1200px;
+}
+
+.control_robot{
+	margin: auto;
+}
+
+#st-left, #forward, #st-right{
+	margin-top: 40px;
+}
+
+#forward{
+	margin-left: 70px;
+	margin-right: 70px;
 }
