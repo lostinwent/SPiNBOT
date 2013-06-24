@@ -334,4 +334,16 @@ function whatToDo(c_direction, c_time) {
       $.scrollTo(".control_robot", 800, {easing:'swing'});
      });
   });
+
+  $(document).ready(function() {
+    function loop() {
+        $('#robot_car').css({right:0});
+        $('#robot_car').animate ({
+            right: '+=1400',
+        }, 8500, 'linear', function() {
+            loop();
+        });
+    }
+    loop();
+});
 });
