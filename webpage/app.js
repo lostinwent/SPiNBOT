@@ -317,12 +317,6 @@ function whatToDo(c_direction, c_time) {
      });
   });
 
-  // $(document).ready(function() {
-  //   $('#instructions').click(function() {
-  //   $.fn.speedoPopup({theme:"metro"}, {htmlContent: "<p> Click the direction icons or using keys as following:\n W: forward\n S: backward\n A: left\n D: right\n Q: strafe left\n E: strafe right"});
-  //    });
-  // });
-
   $(document).ready(function() {
     $('#sb1').click(function(bbb){
       $.scrollTo(".spin", 800, {easing:'swing'});

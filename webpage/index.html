@@ -3,58 +3,41 @@
 	
 	<head>
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
-		<title>cheesy SPiNBOT fuckface</title>
+		<title> SPiNBOT yoYoYo! </title>
 	</head>
 
 	<body>
 		<div class="start">
 			<h2 class="yo" id="yo1">YO!</h2>
 			<h2 class="yo" id="yo2"> Welcome to</h2>
-			<!--<h1 id="rb">SPiNBot</h1>-->
 			<img src="images/spinbot.png" id="rb"/>
 			<div class="nav_button">
 				<img src="images/feeling_lucky.png" id="sb1"/>
-				<!-- <div class="play_overlay">
-					<img src="play.png"/>
-				</div> -->
 				<img src="images/control_robot.png" id="sb2"/>
-				<!-- <div class="control_robot_overlay">
-					<img src="images/control_robot1.png"/>
-				</div> -->
 				<img src="images/winning_rules.png" id="sb3"/>
-				<!-- <div class="winning_overlay">
-					<img src="images/winning_rules1.png"/>
-				</div> -->
-			</div>
+			<div>
 		</div>
 
 		<div class="spin">
 			<img src="images/spin.png" onlick="spin();" class = "spin_button" id="button"/>
-			<!-- <input type="submit" value="SPIN!" onlick="spin();" id="button"/> -->
 			<canvas id="wheelcanvas" width="500" height="500"></canvas>
 		</div>		
 		
 		<div class="control_robot">
 			<img src="images/instructions.png" 	id="instructions"/>
+
 			<div class="top-row">
 				<img src="images/strafe_l.png" 		id="st-left"/>
 				<img src="images/forward.png" 		id="forward"/>
 				<img src="images/strafe_r.png" 		id="st-right"/>
 			</div>
+
 			<div class="bottom-row">
 				<img src="images/left.png" 				id="left"/>
 				<img src="images/backward.png" 		id="backward"/>
 				<img src="images/right.png" 			id="right"/>
 			</div>
-<!--		<form>-->
-			
-<!--		<input type="submit" id="forward" value="click here or press W to fuckface forward"></input>
-			<input type="submit" id="backward" value="click here or press S fuckface backward"></input>
-			<input type="submit" id="left" value="click here or press A to fuckface left"></input>
-			<input type="submit" id="right" value="click here or press D to fuckface right"></input>
-			<input type="submit" id="st-right" value="click here or press Q to fuckface strafe left"></input>
-			<input type="submit" id="st-left" value="click here or press E to fuckface strafe right"></input>-->
-<!--		</form>-->
+
 			<img src="images/robot.png" id="robot_car">
 		</div>
 		
@@ -69,12 +52,6 @@
 		  <h1 id="reveal_instructions_title">Instructions</h1>
 		  <p class="reveal_instructions_content">Click the direction icons or using keys as following: </p>
 		  <img src="images/instruction_keys.png" id="instrc_keys"/>
-<!-- 		  <p class="reveal_content">W: forward </p>
-		  <p class="reveal_content">S: backward </p>
-		  <p class="reveal_content">A: left </p>
-		  <p class="reveal_content">D: right </p>
-		  <p class="reveal_content">Q: strafe left </p>
-		  <p class="reveal_content">E: strafe right</p> -->
 		  <a class="close-reveal-modal">&#215;</a>
 		</div>
 
