@@ -339,5 +339,5 @@ function whatToDo(c_direction, c_time) {
         });
     }
     loop();
-});
+  });
 });

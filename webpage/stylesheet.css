@@ -1,6 +1,5 @@
 body {
   text-align: center;
-/*  margin: 50px 0px;*/
 }
 
 .start {
@@ -32,10 +31,6 @@ body {
 	margin: auto;
 	display: block;
 }
-/*#sb2 {
-	margin-left: 30px;
-	margin-right: 30px;
-}*/
 
 .spin{
 	min-height: 666px;
